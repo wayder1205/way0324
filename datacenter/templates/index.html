@@ -61,7 +61,9 @@
         {% endfor %}
     </tr>
 </table>
-
+{% for post in posts %}
+	{{ post.id }}:{{ post.title }}, {{ post.pub_date }}<br/>
+{% endfor %}
   </div>>
 
     <!-- Optional JavaScript; choose one of the two! -->
