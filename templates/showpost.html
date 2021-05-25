@@ -1,5 +1,8 @@
-<a herf="/">返回首頁</a><br>
-<table width=800 border=1>
+{% extends 'base.html' %}
+{% block title %}消息內容頁面{% endblock %}
+{% block headmessage %} <h1>顯示消息內容</h1> {% endblock %}
+{% block content %} 
+<table class='table table-striped table-bordered'>
 	<tr>
 		<td>標題</td>
 		<td>{{target.title}}</td>
@@ -13,3 +16,4 @@
 		<td>{{target.body}}</td>
 	</tr>
 </table>
+{% endblock %}
