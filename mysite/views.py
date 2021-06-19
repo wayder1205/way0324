@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import auth
 import random
-from mysite.models import Post, Country, City, StuSite
+from mysite.models import Post, Country, City, StuSite, TeamSite
 
 def index(request):
 	posts = Post.objects.all()
@@ -34,6 +34,7 @@ def chart(request):
 	return render(request, "chart.html",locals())
 
 def teampages(request):
+	sites=TeamSite.objects.all()
 	return render(request, "team-pages.html",locals())
 
 def stupages(request):
